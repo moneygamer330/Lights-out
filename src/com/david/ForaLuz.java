@@ -23,9 +23,27 @@ public class ForaLuz {
 			}
 		}
 	}
+	
+	public static void mostrarAscii() {
+		String line = "\r\n"
+				+ " __                                                      ________                           \r\n"
+				+ "/  |                                                    /        |                          \r\n"
+				+ "$$ |       __    __   _______   ______    _______       $$$$$$$$/______    ______   ______  \r\n"
+				+ "$$ |      /  |  /  | /       | /      \\  /       |      $$ |__  /      \\  /      \\ /      \\ \r\n"
+				+ "$$ |      $$ |  $$ |/$$$$$$$/ /$$$$$$  |/$$$$$$$/       $$    |/$$$$$$  |/$$$$$$  |$$$$$$  |\r\n"
+				+ "$$ |      $$ |  $$ |$$ |      $$    $$ |$$      \\       $$$$$/ $$ |  $$ |$$ |  $$/ /    $$ |\r\n"
+				+ "$$ |_____ $$ \\__$$ |$$ \\_____ $$$$$$$$/  $$$$$$  |      $$ |   $$ \\__$$ |$$ |     /$$$$$$$ |\r\n"
+				+ "$$       |$$    $$/ $$       |$$       |/     $$/       $$ |   $$    $$/ $$ |     $$    $$ |\r\n"
+				+ "$$$$$$$$/  $$$$$$/   $$$$$$$/  $$$$$$$/ $$$$$$$/        $$/     $$$$$$/  $$/       $$$$$$$/ \r\n"
+				+ "                                                                                            \r\n"
+				+ "                                                                                            \r\n"
+				+ "                                                                                            \r\n";
+		
+		System.out.println(line);
+		                                                                                           
+	}
 
 	public void mostrarMenu() {
-
 		System.out.println("FORA LUZ");
 		System.out.println("CREADO POR QUIQUE, OSCAR, LUIS, FERNANDO, DAVID");
 		System.out.println("1 - Empezar juego");
