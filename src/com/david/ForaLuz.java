@@ -12,9 +12,8 @@ public class ForaLuz {
 	}
 
 	public void rellenar() {
-
 		for (int i = 0; i < tablero.length; i++) {
-			for (int j = 0; j < tablero.length; j++) {
+			for (int j = 0 ; j < tablero.length; j++) {
 				if (Math.random() > 0.5) {
 					tablero[i][j] = true;
 				} else {
@@ -71,12 +70,21 @@ public class ForaLuz {
 	}
 
 	public void mostrarTablero() {
+		System.out.print("\n    ");
+		for (int x = 0; x < tablero.length; x++) {
+			System.out.print(x + "  ");
+		}
+		
+		System.out.println("\n");
+		
 		for (int x = 0; x < tablero.length; x++) {
 			for (int y = 0; y < tablero[x].length; y++) {
-				System.out.print((tablero[x][y] ? "1" : "0") + " ");
+				if (y == 0) System.out.print(x + "   ");
+				System.out.print((tablero[x][y] ? "⚪" : "⚫") + " ");
 			}
 			System.out.println();
 		}
+		System.out.println();
 	}
 
 	public void empezarJuego() {
