@@ -1,10 +1,14 @@
 package com.david;
 
+import java.util.Scanner;
+
 public class ForaLuz {
 	boolean[][] tablero;
+	Scanner scanner;
 	
 	public ForaLuz(int c) {
 		tablero = new boolean[c][c];
+		scanner = new Scanner(System.in);
 		mostrarMenu();
 	}
 	
@@ -35,5 +39,15 @@ public class ForaLuz {
 	
 	public void salirJuego() {
 		
+	}
+
+	public void solicitarCoordenadas() {
+		int x = 0;
+		int y = 0;
+		System.out.println("Ingresa las coodenadas en X.");
+		x=scanner.nextInt();
+		
+		System.out.println("Ingresa las coodenadas en Y.");
+		y=scanner.nextInt();
 	}
 }
