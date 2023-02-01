@@ -31,4 +31,20 @@ public class ForaLuz {
 	public void salirJuego() {
 		
 	}
+	public void ganador(){ //Comproba se o array de booleanos é todo falso e polo tanto gana o xogo 
+		boolean esTrue = false;
+			for (boolean[] columna : tablero){
+				for (boolean fila : columna){
+					if (fila == true) {
+						esTrue = true;
+						break;
+					}
+				}
+				if (esTrue) break;
+		}
+		if (!esTrue) {
+			System.out.println("HAS GANADO");
+			salirJuego();
+		}
+	}
 }
