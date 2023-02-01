@@ -12,6 +12,19 @@ public class ForaLuz {
 		mostrarMenu();
 	}
 
+	public void rellenar(){
+
+		for (int i = 0; i < tablero.length; i++) {
+			for (int j = 0; j < tablero.length; j++) {
+				if (Math.random() > 0.5) {
+					tablero[i][j] = true;
+				} else {
+					tablero[i][j] = false;
+				}
+			}
+		}
+	}
+	
 	public void mostrarMenu() {
 
 		System.out.println("FORA LUZ");
@@ -36,6 +49,13 @@ public class ForaLuz {
 				System.out.println();
 				mostrarMenu();
 				break;
+	
+	public void mostrarTablero() {
+		for (int x = 0; x < tablero.length; x++) {
+			for (int y = 0; y < tablero[x].length; y++) {
+				System.out.print((tablero[x][y] ? "1" : "0") + " ");
+			}
+			System.out.println();
 		}
 	}
 
@@ -46,6 +66,21 @@ public class ForaLuz {
 	public void salirJuego() {
 		System.exit(0);
 	}
+	public void ganador(){ //Comproba se o array de booleanos é todo falso e polo tanto gana o xogo 
+		boolean esTrue = false;
+			for (boolean[] columna : tablero){
+				for (boolean fila : columna){
+					if (fila == true) {
+						esTrue = true;
+						break;
+					}
+				}
+				if (esTrue) break;
+		}
+		if (!esTrue) {
+			System.out.println("HAS GANADO");
+			salirJuego();
+		}
 
 	public void solicitarCoordenadas() {
 		int x = 0;
