@@ -1,11 +1,28 @@
 package com.david;
 
+import java.util.Scanner;
+
 public class ForaLuz {
 	boolean[][] tablero;
+	Scanner scanner;
 	
 	public ForaLuz(int c) {
 		tablero = new boolean[c][c];
+		scanner = new Scanner(System.in);
 		mostrarMenu();
+	}
+
+	public void rellenar(){
+
+		for (int i = 0; i < tablero.length; i++) {
+			for (int j = 0; j < tablero.length; j++) {
+				if (Math.random() > 0.5) {
+					tablero[i][j] = true;
+				} else {
+					tablero[i][j] = false;
+				}
+			}
+		}
 	}
 	
 	public void mostrarMenu() {
@@ -17,7 +34,12 @@ public class ForaLuz {
 	}
 	
 	public void mostrarTablero() {
-		
+		for (int x = 0; x < tablero.length; x++) {
+			for (int y = 0; y < tablero[x].length; y++) {
+				System.out.print((tablero[x][y] ? "1" : "0") + " ");
+			}
+			System.out.println();
+		}
 	}
 	
 	public void empezarJuego() {
@@ -46,5 +68,14 @@ public class ForaLuz {
 			System.out.println("HAS GANADO");
 			salirJuego();
 		}
+
+	public void solicitarCoordenadas() {
+		int x = 0;
+		int y = 0;
+		System.out.println("Ingresa las coodenadas en X.");
+		x=scanner.nextInt();
+		
+		System.out.println("Ingresa las coodenadas en Y.");
+		y=scanner.nextInt();
 	}
 }
