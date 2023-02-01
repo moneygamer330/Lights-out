@@ -7,6 +7,19 @@ public class ForaLuz {
 		tablero = new boolean[c][c];
 		mostrarMenu();
 	}
+
+	public void rellenar(){
+
+		for (int i = 0; i < tablero.length; i++) {
+			for (int j = 0; j < tablero.length; j++) {
+				if (Math.random() > 0.5) {
+					tablero[i][j] = true;
+				} else {
+					tablero[i][j] = false;
+				}
+			}
+		}
+	}
 	
 	public void mostrarMenu() {
 		System.out.println("FORA LUZ");
