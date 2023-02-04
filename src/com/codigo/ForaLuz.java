@@ -1,4 +1,4 @@
-package com.david;
+package com.codigo;
 
 import java.util.Scanner;
 
@@ -44,7 +44,7 @@ public class ForaLuz {
 
 	public void mostrarMenu() {
 		System.out.println("FORA LUZ");
-		System.out.println("CREADO POR QUIQUE, OSCAR, LUIS, FERNANDO, DAVID");
+		System.out.println("CREADO POR QUIQUE, OSCAR, LUIS, FERNANDO Y DAVID");
 		System.out.println("1 - Empezar juego");
 		System.out.println("2 - Salir del juego");
 		System.out.println();
